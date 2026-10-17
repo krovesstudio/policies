@@ -20,12 +20,17 @@
   .updated { color: #5c5140; font-size: .9rem; margin-top: 0; }
   ul { padding-left: 1.25rem; }
   li { margin: .35rem 0; }
+  table { width: 100%; border-collapse: collapse; margin: .75rem 0; font-size: .95rem; }
+  th, td { border: 1px solid #d8cdb4; padding: .45rem .55rem; text-align: left; vertical-align: top; }
+  th { background: #e9e1cf; }
   a { color: #7a5a12; }
   code { background: #e9e1cf; padding: .1rem .3rem; border-radius: 3px; font-size: .9em; }
   footer { margin-top: 3rem; font-size: .9rem; color: #5c5140; }
   @media (prefers-color-scheme: dark) {
     body { background: #16130f; color: #e8dcc4; }
     h2 { border-bottom-color: #3d3832; }
+    th, td { border-color: #3d3832; }
+    th { background: #2a2622; }
     .updated, footer { color: #b8a88a; }
     code { background: #2a2622; }
     a { color: #e0bc55; }
@@ -35,7 +40,7 @@
 <body>
 
 <h1>Política de Privacidade — Sellsword Tactics</h1>
-<p class="updated">Última atualização: 28 de agosto de 2026</p>
+<p class="updated">Última atualização: 17 de outubro de 2026</p>
 
 <p>Esta política descreve como o aplicativo <strong>Sellsword Tactics</strong>,
 desenvolvido por <strong>Kroves Studio</strong>, trata informações de quem o
@@ -43,117 +48,150 @@ utiliza. Ao instalar e usar o jogo, você concorda com as práticas descritas
 aqui.</p>
 
 <h2>Resumo</h2>
-<p>O Sellsword Tactics é um jogo para um jogador, jogável <strong>sem conexão com
-a internet</strong>. Não pedimos cadastro, não pedimos login e <strong>não
-coletamos dados que identifiquem você pessoalmente</strong>, como nome, e-mail,
-telefone, endereço, contatos, fotos, localização precisa ou dados de pagamento.</p>
-<p>O único dado enviado para fora do aparelho é <strong>diagnóstico técnico e
-estatística de uso anônima</strong>, usada para corrigir falhas e entender em que
-ponto do jogo as pessoas param.</p>
+<p>O Sellsword Tactics é um jogo para um jogador. <strong>Não pedimos cadastro
+nem login.</strong> O progresso da campanha fica <strong>no seu aparelho</strong>;
+não mantemos servidor com saves na nuvem.</p>
+<p>A maior parte do jogo funciona <strong>sem internet</strong>. Conexão pode ser
+necessária para: <strong>anúncios em vídeo opcionais</strong> (se você escolher
+assistir), envio de <strong>diagnóstico e estatísticas anônimas</strong>,
+verificação de <strong>atualização na Google Play</strong> e abrir links (por
+exemplo, esta política).</p>
+<p><strong>Não coletamos</strong> nome, e-mail, telefone, endereço, contatos,
+fotos, localização precisa ou dados de pagamento. <strong>Não vendemos</strong>
+dados pessoais.</p>
 
 <h2>Dados armazenados no seu aparelho</h2>
-<p>Todo o seu progresso — campanhas, mercenários, itens, ouro, conquistas e
-configurações de áudio — é gravado <strong>apenas na memória do seu próprio
-aparelho</strong>. Esses dados não são enviados para nenhum servidor e não podem
-ser acessados por nós. Se você desinstalar o aplicativo, eles são apagados junto.</p>
+<p>Todo o seu progresso — campanhas, mercenários, itens, ouro, conquistas,
+preferências de áudio e registros locais de ofertas (como renovação por ouro ou
+por anúncio) — é gravado <strong>apenas na memória do seu próprio aparelho</strong>.
+Esses dados não são enviados para servidores da Kroves Studio.</p>
+<p>Se você desinstalar o aplicativo ou limpar os dados dele nas configurações do
+Android, essas informações são apagadas.</p>
 
-<h2>Dados coletados automaticamente</h2>
+<h2>Uso de internet</h2>
+<table>
+  <thead><tr><th>Finalidade</th><th>Obrigatório?</th></tr></thead>
+  <tbody>
+    <tr><td>Jogar campanha, combate, cidade, mapa</td><td>Não</td></tr>
+    <tr><td>Assistir <strong>anúncio recompensado</strong> (você toca e confirma)</td><td>Sim, só nesse momento</td></tr>
+    <tr><td>Relatórios de falha (Crashlytics) e marcos de uso (Analytics)</td><td>Sim, quando o Firebase está ativo no build</td></tr>
+    <tr><td>Checar atualização disponível na Play</td><td>Sim, só quando o jogo consulta a loja</td></tr>
+    <tr><td>Abrir esta política no navegador</td><td>Sim, só quando você escolhe o link no jogo</td></tr>
+  </tbody>
+</table>
+
+<h2>Dados coletados automaticamente (Firebase)</h2>
 <p>Utilizamos serviços do <strong>Google Firebase</strong> para manter o jogo
-estável. São dois:</p>
+estável e entender o funil de progresso. Em builds de desenvolvimento ou sem
+configuração Firebase, essa coleta fica <strong>desligada</strong>.</p>
 
 <h3>Firebase Crashlytics — relatórios de falha</h3>
-<p>Quando o jogo apresenta um erro, é enviado um relatório técnico contendo:</p>
+<p>Quando o jogo apresenta um erro, pode ser enviado um relatório técnico contendo:</p>
 <ul>
   <li>descrição técnica do erro e o ponto do código em que ocorreu;</li>
   <li>modelo do aparelho, versão do Android e memória disponível;</li>
   <li>versão do aplicativo e data/hora da falha;</li>
   <li>um identificador aleatório de instalação, gerado pelo próprio serviço.</li>
 </ul>
-<p>Esse identificador serve apenas para saber que várias falhas vieram do mesmo
-aparelho. Ele não está ligado à sua identidade e é descartado se você desinstalar
-o aplicativo.</p>
+<p>Esse identificador agrupa falhas do mesmo aparelho. Não está ligado ao seu
+nome de campanha nem aos nomes dos mercenários.</p>
 
 <h3>Firebase Analytics — estatísticas de uso</h3>
-<p>Registramos marcos de progresso no jogo, de forma agregada e anônima, por
-exemplo: conclusão do guia inicial, conclusão do primeiro contrato, dia da
-campanha alcançado, fim de campanha por falta de recursos, conquista de
-territórios e encerramento da campanha.</p>
-<p>Junto a esses marcos são registrados números do próprio jogo, como o dia da
-campanha e a quantidade de ouro. O serviço também coleta automaticamente
-informações técnicas como modelo do aparelho, versão do sistema, idioma e país
-aproximado (derivado do endereço IP, sem armazenar o IP).</p>
-<p><strong>Nunca registramos textos escritos por você</strong>, como o nome da sua
-campanha ou os nomes dos seus mercenários.</p>
+<p>Registramos <strong>marcos de progresso</strong> de forma agregada, por exemplo:
+guia inicial, primeiro contrato, dias de campanha, falência, mapa, juramento,
+cerco final e fim de campanha. Podem ir números do jogo (dia, ouro, etc.). O
+serviço também registra dados técnicos (idioma, modelo, versão do sistema, país
+aproximado derivado do IP, sem guardar o IP em texto).</p>
+<p><strong>Nunca enviamos textos que você digita</strong> (nome da companhia,
+nomes de mercenários, etc.) para o Analytics.</p>
 
-<h3>Identificador de publicidade</h3>
-<p>O aplicativo <strong>remove explicitamente</strong> a permissão de acesso ao
-Identificador de Publicidade do Android (<code>AD_ID</code>). Não utilizamos esse
-identificador, não fazemos rastreamento entre aplicativos e não criamos perfis de
-anúncio.</p>
+<h2>Anúncios (Google AdMob)</h2>
+<p>O jogo é <strong>gratuito</strong> e <strong>não possui compras dentro do
+aplicativo</strong>.</p>
+<p>Exibimos apenas <strong>anúncios em vídeo recompensados</strong>, e
+<strong>somente se você confirmar</strong> que quer assistir. Não há anúncios de
+tela cheia impostos após partidas, nem anúncios como única forma de progresso.</p>
+<p><strong>Onde pode aparecer a opção de anúncio:</strong></p>
+<ul>
+  <li><strong>Renovação de estoque</strong> na taverna, ferreiro ou mural de
+      contratos — a renovação <strong>por ouro continua disponível</strong>; o
+      vídeo é alternativa em ciclos definidos pelo jogo.</li>
+  <li><strong>Médico de campo</strong> — oferta opcional após combate (ou no
+      acampamento) para tentar recuperar mercenários com resiliência zerada, com
+      consequências de jogo; recusar ou ficar offline mantém o fluxo normal.</li>
+</ul>
+<p>Os anúncios são servidos pelo <strong>Google AdMob</strong> (Google LLC). Ao
+assistir, o dispositivo comunica-se com servidores do Google. O AdMob pode tratar
+identificadores de dispositivo ou de publicidade, endereço IP, interações com o
+anúncio e dados técnicos conforme a
+<a href="https://policies.google.com/privacy">política do Google</a> e as
+<a href="https://support.google.com/admob/answer/6128543">informações do AdMob</a>.</p>
+<p>A Kroves Studio <strong>não</strong> escolhe anunciantes manualmente nem
+recebe lista de sites que você visita fora do jogo. <strong>Não</strong> usamos
+Firebase Analytics para vender ou segmentar anúncios.</p>
+<p>Você pode <strong>recusar</strong> anúncios: basta não tocar na opção de vídeo
+e usar ouro, recuperação normal ou aguardar o ciclo de renovação.</p>
 
 <h2>Para que usamos esses dados</h2>
 <ul>
-  <li>Identificar e corrigir travamentos, erros e problemas de desempenho.</li>
-  <li>Entender em que ponto da campanha os jogadores param, para equilibrar a
-      dificuldade e melhorar o jogo.</li>
-  <li>Saber em quais aparelhos e versões do Android o jogo apresenta problemas.</li>
+  <li>Corrigir travamentos e erros (Crashlytics).</li>
+  <li>Entender em que ponto da campanha os jogadores param (Analytics).</li>
+  <li>Entregar recompensas de vídeo quando <strong>você</strong> opta por assistir (AdMob).</li>
+  <li>Verificar se há atualização na Google Play.</li>
 </ul>
-<p>Não usamos esses dados para publicidade, não vendemos dados e não os
-compartilhamos com terceiros além dos serviços de infraestrutura citados.</p>
+<p>Não vendemos dados. Não compartilhamos progresso de campanha com terceiros.</p>
 
 <h2>Compartilhamento com terceiros</h2>
-<p>Os dados de diagnóstico e uso são processados pelo <strong>Google LLC</strong>,
-por meio dos serviços Firebase Crashlytics e Firebase Analytics, na condição de
-operador dos dados. O tratamento realizado pelo Google é regido pela política de
-privacidade do próprio Google:</p>
+<table>
+  <thead><tr><th>Operador</th><th>Serviço</th><th>Finalidade</th></tr></thead>
+  <tbody>
+    <tr><td>Google LLC</td><td>Firebase Crashlytics</td><td>Diagnóstico de falhas</td></tr>
+    <tr><td>Google LLC</td><td>Firebase Analytics</td><td>Estatísticas agregadas</td></tr>
+    <tr><td>Google LLC</td><td>Google AdMob</td><td>Anúncios recompensados opcionais</td></tr>
+    <tr><td>Google LLC</td><td>Google Play (atualização in-app)</td><td>Aviso de nova versão</td></tr>
+  </tbody>
+</table>
+<p>Políticas relevantes:</p>
 <ul>
   <li><a href="https://firebase.google.com/support/privacy">firebase.google.com/support/privacy</a></li>
   <li><a href="https://policies.google.com/privacy">policies.google.com/privacy</a></li>
+  <li><a href="https://support.google.com/admob/answer/6128543">AdMob — privacidade</a></li>
 </ul>
-<p>Não há outro compartilhamento.</p>
 
-<h2>Anúncios e compras</h2>
-<p>Nesta versão, o aplicativo <strong>não exibe anúncios</strong> e <strong>não
-oferece compras dentro do aplicativo</strong>. Caso isso mude em uma versão
-futura, esta política será atualizada antes do lançamento da versão
-correspondente, e a ficha do aplicativo na Google Play passará a informar a
-presença de anúncios ou compras.</p>
+<h2>Compras</h2>
+<p>O aplicativo <strong>não oferece compras dentro do aplicativo</strong> (sem
+microtransações, sem assinatura).</p>
 
 <h2>Retenção</h2>
-<p>Relatórios de falha são mantidos pelo Firebase Crashlytics por até 90 dias.
-Dados de eventos do Firebase Analytics são mantidos por até 14 meses, conforme a
-configuração padrão do serviço. Depois desses períodos, são excluídos ou mantidos
-apenas de forma agregada, sem qualquer vínculo com um aparelho.</p>
+<ul>
+  <li><strong>Crashlytics:</strong> até cerca de 90 dias (padrão Firebase).</li>
+  <li><strong>Analytics:</strong> até cerca de 14 meses (padrão Firebase).</li>
+  <li><strong>AdMob:</strong> conforme políticas do Google; não guardamos cópia própria do histórico de anúncios.</li>
+</ul>
+<p>Dados de jogo no aparelho permanecem até você apagá-los ou desinstalar.</p>
 
 <h2>Crianças</h2>
-<p>O aplicativo não é direcionado a crianças menores de 13 anos e não coleta
-intencionalmente dados de crianças. Não há chat, comunidade, conteúdo gerado por
-usuários nem qualquer forma de contato entre jogadores.</p>
+<p>O aplicativo não é direcionado a crianças menores de 13 anos. Não há chat,
+comunidade, conteúdo gerado por usuários nem contato entre jogadores.</p>
 
 <h2>Seus direitos</h2>
-<p>Como não coletamos dados pessoais identificáveis, não temos como localizar
-informações associadas especificamente a você. Ainda assim, você pode:</p>
+<p>Você pode:</p>
 <ul>
-  <li><strong>Interromper toda a coleta</strong> desinstalando o aplicativo. Com a
-      desinstalação, o identificador de instalação é descartado e nenhum dado novo
-      é enviado.</li>
-  <li><strong>Apagar seus dados de jogo</strong> limpando os dados do aplicativo
-      nas configurações do Android ou desinstalando-o.</li>
-  <li><strong>Solicitar esclarecimentos</strong> pelo contato abaixo, conforme a
-      Lei Geral de Proteção de Dados (LGPD, Lei nº 13.709/2018) e, quando
-      aplicável, o GDPR.</li>
+  <li><strong>Parar envio de diagnóstico/analytics</strong> desinstalando o app (e deixar de assistir anúncios).</li>
+  <li><strong>Apagar progresso local</strong> limpando dados do app ou desinstalando.</li>
+  <li><strong>Solicitar esclarecimentos</strong> pelo contato abaixo (LGPD — Lei nº 13.709/2018; GDPR quando aplicável).</li>
 </ul>
+<p>Como não associamos saves a contas identificáveis, não conseguimos recuperar ou
+apagar sua campanha em servidor — ela só existe no dispositivo.</p>
 
 <h2>Segurança</h2>
-<p>Os dados de diagnóstico são transmitidos por conexão criptografada e
-armazenados na infraestrutura do Google. Nenhum sistema é totalmente imune a
-falhas, mas não mantemos servidores próprios nem bancos de dados com informações
-de jogadores.</p>
+<p>Dados enviados ao Google (Firebase, AdMob) trafegam por conexão criptografada
+(HTTPS). Não operamos servidores próprios de save de jogadores.</p>
 
 <h2>Alterações nesta política</h2>
-<p>Esta política pode ser atualizada para refletir mudanças no aplicativo ou na
-legislação. A data no topo do documento indica a última revisão. Mudanças
-relevantes serão publicadas nesta mesma página antes de entrarem em vigor.</p>
+<p>Esta política pode ser atualizada quando o aplicativo ou a legislação mudar. A
+data no topo indica a última revisão. Mudanças relevantes serão publicadas nesta
+mesma página antes de entrarem em vigor.</p>
 
 <h2>Contato</h2>
 <p>Dúvidas ou solicitações sobre privacidade:</p>
