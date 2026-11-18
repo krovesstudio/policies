@@ -40,7 +40,7 @@
 <body>
 
 <h1>Política de Privacidade — Sellsword Tactics</h1>
-<p class="updated">Última atualização: 21 de outubro de 2026</p>
+<p class="updated">Última atualização: 18 de novembro de 2026</p>
 
 <p>Esta política descreve como o aplicativo <strong>Sellsword Tactics</strong>,
 desenvolvido por <strong>Kroves Studio</strong>, trata informações de quem o
@@ -82,6 +82,7 @@ Android, essas informações são apagadas.</p>
     <tr><td>Assistir <strong>anúncio recompensado</strong> (você toca e confirma)</td><td>Sim, só nesse momento</td></tr>
     <tr><td>Relatórios de falha (Crashlytics) e marcos de uso (Analytics)</td><td>Sim, quando o Firebase está ativo no build</td></tr>
     <tr><td>Checar atualização disponível na Play</td><td>Sim, só quando o jogo consulta a loja</td></tr>
+    <tr><td><strong>Confirmar</strong> se o Pacote inicial ainda está ativo na Play (só quem já comprou)</td><td>Sim, na abertura; se a loja falhar, o jogo <strong>não</strong> revoga nada</td></tr>
     <tr><td>Abrir esta política no navegador</td><td>Sim, só quando você escolhe o link no jogo</td></tr>
   </tbody>
 </table>
@@ -118,12 +119,17 @@ exibimos apenas <strong>anúncios em vídeo recompensados</strong>, e
 tela cheia impostos após partidas, nem anúncios como única forma de progresso.</p>
 <p><strong>Onde pode aparecer a opção de anúncio:</strong></p>
 <ul>
-  <li><strong>Renovação de estoque</strong> na taverna, ferreiro ou mural de
-      contratos — a renovação <strong>por ouro continua disponível</strong>; o
-      vídeo é alternativa em ciclos definidos pelo jogo.</li>
+  <li><strong>Renovação de estoque</strong> na taverna, no ferreiro e no mural
+      de contratos — ouro e vídeo aparecem juntos. O vídeo pode ser usado
+      <strong>até 2 vezes a cada 7 dias</strong>. Quem tem o pacote inicial
+      usa esse mesmo limite sem anúncio.</li>
   <li><strong>Médico de campo</strong> — oferta opcional após combate (ou no
       acampamento) para tentar recuperar mercenários com resiliência zerada, com
-      consequências de jogo; recusar ou ficar offline mantém o fluxo normal.</li>
+      consequências de jogo; recusar ou ficar offline mantém o fluxo normal.
+      Quem tem o pacote inicial chama o médico sem anúncio e sem ouro.</li>
+  <li><strong>Torre / Expedição</strong> — coleta extra de Ecos no acampamento
+      e bônus opcional de Coroas ao resgatar o baú. Quem tem o pacote inicial
+      recebe esses benefícios sem anúncio e sem ouro, no mesmo limite do jogo.</li>
 </ul>
 <p>Os anúncios são servidos pelo <strong>Google AdMob</strong> (Google LLC). Ao
 assistir, o dispositivo comunica-se com servidores do Google. O AdMob pode tratar
@@ -132,8 +138,12 @@ anúncio e dados técnicos conforme a
 <a href="https://policies.google.com/privacy">política do Google</a> e as
 <a href="https://support.google.com/admob/answer/6128543">informações do AdMob</a>.</p>
 <p>A Kroves Studio <strong>não</strong> escolhe anunciantes manualmente nem
-recebe lista de sites que você visita fora do jogo. <strong>Não</strong> usamos
-Firebase Analytics para vender ou segmentar anúncios.</p>
+recebe lista de sites que você visita fora do jogo. <strong>Não vendemos dados
+pessoais.</strong> Usamos estatísticas agregadas do Firebase Analytics
+integradas ao Google Ads para medir o desempenho das campanhas de divulgação
+e encontrar novos jogadores interessados no jogo. A receita agregada de
+compras e de anúncios também é sincronizada com o Analytics para
+acompanhamento interno.</p>
 <p>Você pode <strong>recusar</strong> anúncios: basta não tocar na opção de vídeo
 e usar ouro, recuperação normal ou aguardar o ciclo de renovação.</p>
 
@@ -154,6 +164,7 @@ e usar ouro, recuperação normal ou aguardar o ciclo de renovação.</p>
     <tr><td>Google LLC</td><td>Firebase Crashlytics</td><td>Diagnóstico de falhas</td></tr>
     <tr><td>Google LLC</td><td>Firebase Analytics</td><td>Estatísticas agregadas</td></tr>
     <tr><td>Google LLC</td><td>Google AdMob</td><td>Anúncios recompensados opcionais</td></tr>
+    <tr><td>Google LLC</td><td>Google Ads</td><td>Medição e otimização de campanhas de divulgação do aplicativo. A receita agregada de compras e de anúncios também é sincronizada com o Firebase Analytics para acompanhamento interno.</td></tr>
     <tr><td>Google LLC</td><td>Google Play Billing</td><td>Compras opcionais de pacotes (produtos únicos)</td></tr>
     <tr><td>Google LLC</td><td>Google Play (atualização in-app)</td><td>Aviso de nova versão</td></tr>
   </tbody>
@@ -177,6 +188,11 @@ principal continua jogável <strong>sem comprar</strong>.</p>
   <li>Para concluir uma compra, o aparelho precisa estar <strong>online</strong> e
       com a loja configurada na sua região.</li>
   <li><strong>Reembolsos e cancelamentos</strong> seguem as regras da Google Play.</li>
+  <li>Se a Play registrar <strong>reembolso</strong> do Pacote inicial, o jogo pode
+      <strong>remover as relíquias desse pacote</strong>, <strong>reativar anúncios</strong>
+      e parar de conceder o baú em campanhas novas, <strong>sem</strong> retirar ouro já
+      ganho. A checagem roda na abertura, só para quem ainda marca o pacote como comprado;
+      offline ou erro da loja = nenhuma mudança.</li>
   <li>Compras <strong>não transferem</strong> automaticamente entre contas Google
       nem entre aparelhos — o benefício aplica-se ao save local conforme cada pacote.</li>
 </ul>
